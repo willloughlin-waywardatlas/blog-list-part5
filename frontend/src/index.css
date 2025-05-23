@@ -1,0 +1,30 @@
+.notification {
+	background: #FFFFFF;
+    border-radius: 5px;
+    border: 2px solid;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+    margin: 10px;
+    overflow: hidden;
+    height: 0;
+}
+
+.notification p{
+	margin: 10px;
+}
+
+.notification.success {
+	color: #09942d;
+    background: #e8faeb;
+    border-color: #6fc084;
+    height: 40px;
+    transition: background 0.2s ease-in-out, height 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.notification.error {
+	color: #c00b0b;
+    background: #ffc7c7;
+    border-color: #f46c6c;
+    height: 40px;
+    transition: background 0.2s ease-in-out, height 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
