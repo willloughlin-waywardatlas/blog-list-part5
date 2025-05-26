@@ -28,3 +28,18 @@
     height: 40px;
     transition: background 0.2s ease-in-out, height 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
+
+.blog {
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 10px 0px 0px 0px;
+    padding: 10px;
+}
+
+.blog button {
+    margin-left: 15px;
+}
+
+.blog div {
+    margin: 0px 0px 10px 0px;
+}
