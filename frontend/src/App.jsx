@@ -126,6 +126,16 @@ const App = () => {
     )
   }
 
+  const addLike = async (blog) => {
+    const updatedBlog = { ...blog, likes: blog.likes + 1 }
+    await blogService.update(updatedBlog)
+    const updatedBlogList = blogs.map((entry) => {
+      return entry.id === blog.id ? updatedBlog : entry
+    })
+    const sortedBlogs = updatedBlogList.toSorted((a, b) => b.likes - a.likes)
+    setBlogs( sortedBlogs )
+  }
+
   return (
     <div>
       <h2>blogs</h2>
@@ -135,7 +145,7 @@ const App = () => {
       <Notification message={message}/>
       {user ? createBlog() : login() }
       {blogs.map(blog =>
-        <Blog key={blog.id} blog={blog} blogs={blogs} setBlogs={setBlogs}/>
+        <Blog key={blog.id} blog={blog} blogs={blogs} setBlogs={setBlogs} addLike={addLike}/>
       )}
     </div>
   )
